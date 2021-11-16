@@ -4,7 +4,7 @@ import bg from './resources/original.jpg';
 
 const StyledContainer = styled.div`
    .jumbo{
-       background-image: url(${bg});
+       background-image: url("https://cdn.pixabay.com/photo/2021/11/06/16/11/greece-6773682_1280.jpg");
        background-size: 100%;
        .desc{
            width: 800px;

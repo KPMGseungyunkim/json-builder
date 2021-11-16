@@ -53,23 +53,12 @@ export default function Header({ subtitle, boxShadow, bgColor, menus, jsonBuilde
     return (
         <StyledContainer className="navbar navbar-light" boxShadow={boxShadow ? "4px 0px 40px #dbdbdb" : "none"} bgColor={bgColor}>
             <div>
-                <a href="/" className="align-middle">
-                    <span><img alt="kpmg" src={logo} width="55px" /></span>
-                    <span className="ml-2 mr-5 align-middle">{subtitle}</span>
-                </a>
-                <span className="ml-5 align-middle btn" onClick={toggleHidden}>
-                    <span className="ml-4 nav-btn">Sample</span>
-                    <div className="modal-background" hidden={hidden}></div>
-                    <StyledModal hidden={hidden}>
-                        {/* xs={integer} => width:(xs*24)px;, padding="string(top right bottom left)", alignItems="string"(horizontal) justifyContent="string"(vertical), margin="string(top right bottom left)", border="string"(only border-right), menus={array of {name:"string", link:"string",desc:"string"}} */}
-                        <NavBar xs={9} menus={menus} />
-                    </StyledModal>
-                </span>
+                <a href="/" className="d-flex flex-row align-items-center">
+                    <span>LOGO</span>
+                    <span className="ml-2 mr-5">{subtitle}</span>
 
-                <span className="ml-4 align-middle btn">
                     <Link to={jsonBuilder.link}><span className="nav-btn">JSON Builder</span></Link>
-                </span>
-
+                </a>
             </div>
         </StyledContainer>
     );
